@@ -21,7 +21,6 @@ export default async function handler() {
   const len = memoryWords[retptr / 4 + 1]
 
   // Cast the shared memory buffer to octets to convert to a
-  // JavaScript string
   const memoryBytes = new Uint8Array(exports.memory.buffer)
   const strBytes = memoryBytes.subarray(str, str + len)
 
